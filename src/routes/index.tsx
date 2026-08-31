@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { YatraXApp } from '@/components/YatraXApp'
+import { MergedYatraX } from '@/components/MergedYatraX'
 
 export const Route = createFileRoute('/')({ component: Home })
 
 function Home() {
-  return <YatraXApp />
+  return <MergedYatraX />
 }
