@@ -1,0 +1,29 @@
+@import "tailwindcss" source("../");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --color-navy-950: #060b16;
+  --color-navy-900: #0a1220;
+  --color-navy-800: #101c30;
+  --color-navy-700: #182a44;
+  --color-emerald-glow: #22d98a;
+  --color-cyan-glow: #34d3f0;
+  --color-gold-glow: #f0c869;
+}
+
+.merge-ui { min-height: 100vh; background: #060b16; color: #eef4fb; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+.merge-ui * { box-sizing: border-box; }
+.merge-ui .font-display { font-family: 'DM Serif Display', Georgia, serif; }
+.merge-ui .glass { background: linear-gradient(155deg, rgba(255,255,255,.065), rgba(255,255,255,.018)); border: 1px solid rgba(255,255,255,.09); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.merge-ui .glass-strong { background: linear-gradient(155deg, rgba(255,255,255,.10), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); }
+.merge-ui .text-gradient-emerald { background: linear-gradient(90deg,#22d98a,#34d3f0); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.merge-ui .glow-emerald { box-shadow: 0 0 40px -10px rgba(34,217,138,.45); }
+.merge-ui .glow-cyan { box-shadow: 0 0 40px -10px rgba(52,211,240,.45); }
+.merge-ui .focus-ring:focus-visible { outline: 2px solid #34d3f0; outline-offset: 3px; border-radius: 8px; }
+.merge-ui section { scroll-margin-top: 80px; }
+
+@keyframes merge-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
+.merge-ui .animate-float { animation: merge-float 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .merge-ui * { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
